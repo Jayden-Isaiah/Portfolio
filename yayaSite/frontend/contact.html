@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — YayasWrld</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <a href="index.html" class="nav-logo">YAYAS<span>WRLD</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link">Accueil</a></li>
+      <li><a href="designs.html" class="nav-link">Designs</a></li>
+      <li><a href="merch.html" class="nav-link nav-merch">Merch <span class="badge">Bientôt</span></a></li>
+      <li><a href="contact.html" class="nav-link active nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-main">
+    <div class="page-header reveal">
+      <span class="section-label">— Contact</span>
+      <h1 class="section-title">Travaillons<br><em>ensemble.</em></h1>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="contact-desc">
+          Collaborations, commandes, projets créatifs — toutes les idées sont les bienvenues.
+        </p>
+        <div class="contact-links">
+          <a href="https://instagram.com/yayamadethat" target="_blank" class="contact-link">
+            <span class="link-label">Instagram</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal delay-1" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contactName">Nom</label>
+            <input type="text" id="contactName" name="name" placeholder="Ton nom" required/>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email</label>
+            <input type="email" id="contactEmail" name="email" placeholder="ton@email.com" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">Sujet</label>
+          <input type="text" id="contactSubject" name="subject" placeholder="Collaboration, commande..." required/>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" name="message" placeholder="Parle-moi de ton projet..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+          Envoyer le message
+        </button>
+        <p class="form-feedback" id="formFeedback"></p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-checker" aria-hidden="true"></div>
+    <div class="footer-content">
+      <span class="footer-logo">YAYASWRLD</span>
+      <p class="footer-copy">© Tous droit réservés - 2026</p>
+      <a href="https://instagram.com/yayamadethat" target="_blank" class="footer-ig">@yayamadethat</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
