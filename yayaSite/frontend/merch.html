@@ -33,10 +33,35 @@
         <span class="section-label light">— Merch</span>
         <h1 class="merch-title">Quelque chose<br>arrive.</h1>
         <p class="merch-sub">La boutique ouvre bientôt. Reste à l'affût.</p>
-        <form class="merch-form" id="notifyForm">
-          <input type="email" placeholder="ton@email.com" class="merch-input" id="notifyEmail" required/>
+
+        <!--
+          Netlify Forms — aucun backend requis.
+          Netlify intercepte la soumission automatiquement.
+          Les emails apparaissent dans ton dashboard Netlify → Forms.
+        -->
+        <form
+          name="merch-notify"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="merch-form"
+          id="notifyForm"
+        >
+          <!-- Champ anti-spam caché -->
+          <input type="hidden" name="form-name" value="merch-notify"/>
+          <p style="display:none"><input name="bot-field"/></p>
+
+          <input
+            type="email"
+            name="email"
+            placeholder="ton@email.com"
+            class="merch-input"
+            id="notifyEmail"
+            required
+          />
           <button type="submit" class="btn btn-pink">Me notifier</button>
         </form>
+
         <p class="merch-confirm" id="merchConfirm" style="display:none">
           ✓ Tu seras notifié·e au lancement !
         </p>
